@@ -1,0 +1,11 @@
+langchain
+langgraph
+streamlit
+langchain-openai
+langchain-community
+langchain-text-splitters
+pymupdf
+faiss-cpu
+python-dotenv
+requests
+duckduckgo-search

@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments & secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+
+# SQLite databases & checkpoints
+chatbot
+chatbot-shm
+chatbot-wal
+*.db
+*.sqlite
+*.sqlite3
+
+# Local test & practice files
+practice_backend.py
+prontend_practice.py
+*.ipynb
+
+# OS / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
