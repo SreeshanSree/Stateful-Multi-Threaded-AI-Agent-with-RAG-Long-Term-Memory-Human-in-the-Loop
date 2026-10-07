@@ -66,7 +66,7 @@ flowchart TD
 ## 📂 Project Structure
 
 ```
-autonomous-trading-rag/
+Stateful-Multi-Threaded-AI-Agent-with-RAG-Long-Term-Memory-Human-in-the-Loop/
 ├── backend.py            # LangGraph state machine, tool definitions, RAG pipeline & checkpointer
 ├── frontend.py           # Streamlit application, thread manager, streaming handler & HITL approval
 ├── requirements.txt      # Project dependencies
@@ -82,8 +82,8 @@ autonomous-trading-rag/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/SreeshanSree/autonomous-trading-rag.git
-cd autonomous-trading-rag
+git clone https://github.com/SreeshanSree/Stateful-Multi-Threaded-AI-Agent-with-RAG-Long-Term-Memory-Human-in-the-Loop.git
+cd Stateful-Multi-Threaded-AI-Agent-with-RAG-Long-Term-Memory-Human-in-the-Loop
 ```
 
 ### 2. Create and Activate a Virtual Environment
