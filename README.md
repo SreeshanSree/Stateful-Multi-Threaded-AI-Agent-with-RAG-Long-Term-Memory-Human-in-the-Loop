@@ -1,4 +1,4 @@
-# Autonomous Trading & RAG Assistant 🤖📈
+# Stateful Multi-Threaded AI Agent with RAG, Long-Term Memory & Human-in-the-Loop 🤖📈
 
 An enterprise-grade, stateful ReAct (Reasoning and Acting) AI agent built with **LangGraph** and **Streamlit**. This application autonomously routes between live financial API lookups, web searches, and internal document retrieval (Agentic RAG), while enforcing strict **Human-in-the-Loop (HITL)** safety guardrails for transactional operations.
 
