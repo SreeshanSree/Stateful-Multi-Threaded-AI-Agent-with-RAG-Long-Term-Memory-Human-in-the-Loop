@@ -34,22 +34,22 @@ The graph implements a stateful ReAct cycle with persistent checkpoints and inte
 
 ```mermaid
 flowchart TD
-    Start([User Input in Streamlit]) --> LLM[Chatbot LLM Node<br>Azure OpenAI]
-    LLM --> Condition{tools_condition}
+    Start(["User Input in Streamlit"]) --> LLM["Chatbot LLM Node<br/>Azure OpenAI"]
+    LLM --> Condition{"tools_condition"}
     
-    Condition -- "Informational Tool" --> Tools[ToolNode<br>RAG / Stock Price / Search]
+    Condition -->|"Informational Tool"| Tools["ToolNode<br/>RAG / Stock Price / Search"]
     Tools --> LLM
     
-    Condition -- "Transactional Tool<br>(purchase_stock)" --> Interrupt[HITL Gate: interrupt()<br>Freezes Execution State]
-    Interrupt --> UserDecision{User Approval<br>yes / no}
-    UserDecision -- "yes" --> OrderSuccess[Execute Trade & Return Confirmation]
-    UserDecision -- "no" --> OrderCancelled[Cancel Trade & Return Decline Notice]
+    Condition -->|"Transactional Tool: purchase_stock"| Interrupt["HITL Gate: interrupt()<br/>Freezes Execution State"]
+    Interrupt --> UserDecision{"User Approval<br/>yes / no"}
+    UserDecision -->|"yes"| OrderSuccess["Execute Trade and Return Confirmation"]
+    UserDecision -->|"no"| OrderCancelled["Cancel Trade and Return Decline Notice"]
     OrderSuccess --> Tools
     OrderCancelled --> Tools
     
-    Condition -- "No Tool Needed" --> StreamUI[Stream Response Chunks to Streamlit UI]
-    StreamUI --> Checkpoint[(SQLite Checkpointer<br>SqliteSaver State)]
-    Checkpoint --> End([Complete Turn])
+    Condition -->|"No Tool Needed"| StreamUI["Stream Response Chunks to Streamlit UI"]
+    StreamUI --> Checkpoint[("SQLite Checkpointer<br/>SqliteSaver State")]
+    Checkpoint --> End(["Complete Turn"])
 ```
 
 ### Flow Breakdown
